@@ -5,7 +5,7 @@ let computerScore = 0;
 function game(){
   while(playerScore < 5 && computerScore < 5){
     let computerSelection = computerPlay();
-    let playerChoice = playerPlay();
+    let playerChoice = prompt('Choose Your Weapon: Rock | Paper | Scissors');
     let playerSelection = playerChoice.toLowerCase();
     playRound(playerSelection, computerSelection);
     console.log(playerScore);
