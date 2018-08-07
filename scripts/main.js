@@ -2,10 +2,10 @@
 let playerScore = 0;
 let computerScore = 0;
 
-function game(){
+function playGame(){
   while(playerScore < 5 && computerScore < 5){
-    let computerSelection = computerPlay();
-    let playerChoice = prompt('Choose Your Weapon: Rock | Paper | Scissors');
+    let computerSelection = createComputerPlayer();
+    let playerChoice = createPlayer1();
     let playerSelection = playerChoice.toLowerCase();
     playRound(playerSelection, computerSelection);
     console.log(playerScore);
@@ -51,7 +51,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 //Computer Random Rock Paper or Scissors Function
-function computerPlay() {
+function createComputerPlayer() {
   let randomNumber = Math.floor(Math.random() * 10)
   if(randomNumber <= 3) {
     return 'rock';
@@ -63,7 +63,7 @@ function computerPlay() {
 }
 
 //Player Random Rock Paper or Scissors Function
-function playerPlay() {
+function createPlayer1() {
   let randomNumber = Math.floor(Math.random() * 10)
   if(randomNumber <= 3) {
     return 'rock';
@@ -74,4 +74,4 @@ function playerPlay() {
   }
 }
 
-game();
+playGame();
